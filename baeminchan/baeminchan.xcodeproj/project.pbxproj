@@ -16,6 +16,9 @@
 		A758C551211434AD00C2DDC3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A758C550211434AD00C2DDC3 /* Login.storyboard */; };
 		A758C5582114352A00C2DDC3 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A758C5572114352A00C2DDC3 /* CollectionViewController.swift */; };
 		A758C55A2114361F00C2DDC3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A758C5592114361E00C2DDC3 /* Default-568h@2x.png */; };
+		A758C55D2114387B00C2DDC3 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A758C55C2114387B00C2DDC3 /* PostList.swift */; };
+		A758C5612114392100C2DDC3 /* PostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A758C55F2114392100C2DDC3 /* PostListCell.swift */; };
+		A758C5622114392100C2DDC3 /* PostListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A758C5602114392100C2DDC3 /* PostListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		A758C550211434AD00C2DDC3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A758C5572114352A00C2DDC3 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		A758C5592114361E00C2DDC3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A758C55C2114387B00C2DDC3 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
+		A758C55F2114392100C2DDC3 /* PostListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCell.swift; sourceTree = "<group>"; };
+		A758C5602114392100C2DDC3 /* PostListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListCell.xib; sourceTree = "<group>"; };
 		D5E6CB7301A410546515447F /* Pods-baeminchan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baeminchan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-baeminchan/Pods-baeminchan.debug.xcconfig"; sourceTree = "<group>"; };
 		ECD9BE8317C34DD15381FDAA /* Pods-baeminchan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baeminchan.release.xcconfig"; path = "Pods/Target Support Files/Pods-baeminchan/Pods-baeminchan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +91,8 @@
 		A758C53D2114342200C2DDC3 /* baeminchan */ = {
 			isa = PBXGroup;
 			children = (
+				A758C55E211438F600C2DDC3 /* Cell */,
+				A758C55B2114386000C2DDC3 /* Model */,
 				A758C54A2114342400C2DDC3 /* Info.plist */,
 				A758C555211434F500C2DDC3 /* View */,
 				A758C556211434FF00C2DDC3 /* Source */,
@@ -135,6 +143,23 @@
 				A758C53E2114342200C2DDC3 /* AppDelegate.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		A758C55B2114386000C2DDC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A758C55C2114387B00C2DDC3 /* PostList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A758C55E211438F600C2DDC3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A758C55F2114392100C2DDC3 /* PostListCell.swift */,
+				A758C5602114392100C2DDC3 /* PostListCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +225,7 @@
 				A758C551211434AD00C2DDC3 /* Login.storyboard in Resources */,
 				A758C5492114342400C2DDC3 /* LaunchScreen.storyboard in Resources */,
 				A758C5462114342400C2DDC3 /* Assets.xcassets in Resources */,
+				A758C5622114392100C2DDC3 /* PostListCell.xib in Resources */,
 				A758C55A2114361F00C2DDC3 /* Default-568h@2x.png in Resources */,
 				A758C5442114342200C2DDC3 /* Main.storyboard in Resources */,
 			);
@@ -254,6 +280,8 @@
 				A758C5582114352A00C2DDC3 /* CollectionViewController.swift in Sources */,
 				A758C5412114342200C2DDC3 /* ViewController.swift in Sources */,
 				A758C53F2114342200C2DDC3 /* AppDelegate.swift in Sources */,
+				A758C5612114392100C2DDC3 /* PostListCell.swift in Sources */,
+				A758C55D2114387B00C2DDC3 /* PostList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +428,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = baeminchan/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = GoldenShoe.baeminchan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -415,7 +446,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = baeminchan/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = GoldenShoe.baeminchan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
