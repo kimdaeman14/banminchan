@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		377A36D9ADBF9C7B0B16CE2C /* Pods_baeminchan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0566EFF271CCA7B0A046D3BC /* Pods_baeminchan.framework */; };
 		A758C53F2114342200C2DDC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A758C53E2114342200C2DDC3 /* AppDelegate.swift */; };
 		A758C5412114342200C2DDC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A758C5402114342200C2DDC3 /* ViewController.swift */; };
 		A758C5442114342200C2DDC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A758C5422114342200C2DDC3 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0566EFF271CCA7B0A046D3BC /* Pods_baeminchan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_baeminchan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A758C53B2114342200C2DDC3 /* baeminchan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baeminchan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A758C53E2114342200C2DDC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A758C5402114342200C2DDC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		A758C550211434AD00C2DDC3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A758C5572114352A00C2DDC3 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		A758C5592114361E00C2DDC3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D5E6CB7301A410546515447F /* Pods-baeminchan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baeminchan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-baeminchan/Pods-baeminchan.debug.xcconfig"; sourceTree = "<group>"; };
+		ECD9BE8317C34DD15381FDAA /* Pods-baeminchan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baeminchan.release.xcconfig"; path = "Pods/Target Support Files/Pods-baeminchan/Pods-baeminchan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,18 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377A36D9ADBF9C7B0B16CE2C /* Pods_baeminchan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22898F12E8819B8969E6A86B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0566EFF271CCA7B0A046D3BC /* Pods_baeminchan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A580A3876E5E79BD173EE28E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5E6CB7301A410546515447F /* Pods-baeminchan.debug.xcconfig */,
+				ECD9BE8317C34DD15381FDAA /* Pods-baeminchan.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A758C5322114342200C2DDC3 = {
 			isa = PBXGroup;
 			children = (
 				A758C5592114361E00C2DDC3 /* Default-568h@2x.png */,
 				A758C53D2114342200C2DDC3 /* baeminchan */,
 				A758C53C2114342200C2DDC3 /* Products */,
+				A580A3876E5E79BD173EE28E /* Pods */,
+				22898F12E8819B8969E6A86B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,9 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A758C54D2114342400C2DDC3 /* Build configuration list for PBXNativeTarget "baeminchan" */;
 			buildPhases = (
+				CB1C90EFE6370A255DA0D60E /* [CP] Check Pods Manifest.lock */,
 				A758C5372114342200C2DDC3 /* Sources */,
 				A758C5382114342200C2DDC3 /* Frameworks */,
 				A758C5392114342200C2DDC3 /* Resources */,
+				ACDBDEAC311240EEDED23FA0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +206,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ACDBDEAC311240EEDED23FA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-baeminchan/Pods-baeminchan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-baeminchan/Pods-baeminchan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB1C90EFE6370A255DA0D60E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-baeminchan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A758C5372114342200C2DDC3 /* Sources */ = {
@@ -330,14 +395,12 @@
 		};
 		A758C54E2114342400C2DDC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5E6CB7301A410546515447F /* Pods-baeminchan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = baeminchan/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GoldenShoe.baeminchan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -347,14 +410,12 @@
 		};
 		A758C54F2114342400C2DDC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECD9BE8317C34DD15381FDAA /* Pods-baeminchan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = baeminchan/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GoldenShoe.baeminchan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
