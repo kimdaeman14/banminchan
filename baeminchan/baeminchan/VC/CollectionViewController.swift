@@ -21,7 +21,6 @@ class CollectionViewController: UIViewController {
         takeData()
     }
 
-    
     var postlist: [PostList] = [] {
         didSet {
             self.collectView.reloadData()
@@ -47,8 +46,6 @@ class CollectionViewController: UIViewController {
                 }
         }
     }
-   
-
 }
 
 
@@ -81,8 +78,15 @@ extension CollectionViewController : UICollectionViewDataSource {
         }
         return cell
     }
+}
+
+extension CollectionViewController : UICollectionViewDelegate{
     
-    
-    
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let detailViewController = DetailViewController()
+        detailViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(detailViewController, animated: true)
+        
+    }
 }

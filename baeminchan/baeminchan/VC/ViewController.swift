@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         let navigationViewController = storyboard.instantiateViewController(withIdentifier: "NavigationViewController")
         navigationViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(navigationViewController, animated: true)
-
     }
     
     override func viewDidLoad() {

@@ -19,6 +19,10 @@
 		A758C55D2114387B00C2DDC3 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A758C55C2114387B00C2DDC3 /* PostList.swift */; };
 		A758C5612114392100C2DDC3 /* PostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A758C55F2114392100C2DDC3 /* PostListCell.swift */; };
 		A758C5622114392100C2DDC3 /* PostListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A758C5602114392100C2DDC3 /* PostListCell.xib */; };
+		A758C564211444E000C2DDC3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A758C563211444E000C2DDC3 /* DetailViewController.swift */; };
+		A758C5772114560200C2DDC3 /* ChildExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A758C5762114560200C2DDC3 /* ChildExampleViewController.swift */; };
+		A758C57A21145BDA00C2DDC3 /* InstagramExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A758C57921145BDA00C2DDC3 /* InstagramExampleViewController.swift */; };
+		A758C57C21146A7900C2DDC3 /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A758C57B21146A7900C2DDC3 /* BrandViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		A758C55C2114387B00C2DDC3 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		A758C55F2114392100C2DDC3 /* PostListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCell.swift; sourceTree = "<group>"; };
 		A758C5602114392100C2DDC3 /* PostListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListCell.xib; sourceTree = "<group>"; };
+		A758C563211444E000C2DDC3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A758C5762114560200C2DDC3 /* ChildExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildExampleViewController.swift; sourceTree = "<group>"; };
+		A758C57921145BDA00C2DDC3 /* InstagramExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramExampleViewController.swift; sourceTree = "<group>"; };
+		A758C57B21146A7900C2DDC3 /* BrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewController.swift; sourceTree = "<group>"; };
 		D5E6CB7301A410546515447F /* Pods-baeminchan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baeminchan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-baeminchan/Pods-baeminchan.debug.xcconfig"; sourceTree = "<group>"; };
 		ECD9BE8317C34DD15381FDAA /* Pods-baeminchan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-baeminchan.release.xcconfig"; path = "Pods/Target Support Files/Pods-baeminchan/Pods-baeminchan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +134,10 @@
 			children = (
 				A758C5402114342200C2DDC3 /* ViewController.swift */,
 				A758C5572114352A00C2DDC3 /* CollectionViewController.swift */,
+				A758C563211444E000C2DDC3 /* DetailViewController.swift */,
+				A758C5762114560200C2DDC3 /* ChildExampleViewController.swift */,
+				A758C57921145BDA00C2DDC3 /* InstagramExampleViewController.swift */,
+				A758C57B21146A7900C2DDC3 /* BrandViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -242,10 +254,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-baeminchan/Pods-baeminchan-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -277,9 +291,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A758C57C21146A7900C2DDC3 /* BrandViewController.swift in Sources */,
+				A758C5772114560200C2DDC3 /* ChildExampleViewController.swift in Sources */,
 				A758C5582114352A00C2DDC3 /* CollectionViewController.swift in Sources */,
 				A758C5412114342200C2DDC3 /* ViewController.swift in Sources */,
+				A758C57A21145BDA00C2DDC3 /* InstagramExampleViewController.swift in Sources */,
 				A758C53F2114342200C2DDC3 /* AppDelegate.swift in Sources */,
+				A758C564211444E000C2DDC3 /* DetailViewController.swift in Sources */,
 				A758C5612114392100C2DDC3 /* PostListCell.swift in Sources */,
 				A758C55D2114387B00C2DDC3 /* PostList.swift in Sources */,
 			);
@@ -427,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
 				INFOPLIST_FILE = baeminchan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -445,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
 				INFOPLIST_FILE = baeminchan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

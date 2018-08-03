@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,6 +27,14 @@
                                     <action selector="showCollectionViewController:" destination="ptN-x0-1sP" eventType="touchUpInside" id="Ncn-kF-1PT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHp-Wc-lVq">
+                                <rect key="frame" x="153" y="373" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="툴바로 이동"/>
+                                <connections>
+                                    <segue destination="Xak-SE-mWN" kind="show" id="cGD-3N-Csd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kUt-68-5Ph"/>
@@ -34,6 +43,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ock-pl-Q1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5585" y="-3958"/>
+        </scene>
+        <!--ACTIVITY-->
+        <scene sceneID="JsL-J7-T5p">
+            <objects>
+                <viewController id="F27-Na-OJa" customClass="InstagramExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wAW-Ql-s7w"/>
+                        <viewControllerLayoutGuide type="bottom" id="slV-EB-HTR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d5d-em-2p2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kRT-vv-iNQ" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8B9-Vz-HZJ"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Ex-fk-DBm">
+                                    <size key="itemSize" width="40" height="40"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zU-jB-NBu">
+                                <rect key="frame" x="0.0" y="104" width="375" height="563"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2I-kb-11A">
+                                <rect key="frame" x="28" y="622" width="84" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="G9O-bf-YRj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <state key="normal" title="CLOSE"/>
+                                <connections>
+                                    <action selector="closeAction:" destination="F27-Na-OJa" eventType="touchUpInside" id="prB-H2-yaF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8zU-jB-NBu" firstAttribute="leading" secondItem="d5d-em-2p2" secondAttribute="leading" id="3E7-9Y-WfN"/>
+                            <constraint firstAttribute="trailing" secondItem="8zU-jB-NBu" secondAttribute="trailing" id="Gmw-sW-cRl"/>
+                            <constraint firstItem="slV-EB-HTR" firstAttribute="top" secondItem="8zU-jB-NBu" secondAttribute="bottom" id="KYf-lF-WEO"/>
+                            <constraint firstItem="slV-EB-HTR" firstAttribute="top" secondItem="O2I-kb-11A" secondAttribute="bottom" constant="12" id="PDr-YR-NAC"/>
+                            <constraint firstItem="O2I-kb-11A" firstAttribute="leading" secondItem="d5d-em-2p2" secondAttribute="leadingMargin" constant="12" id="VGO-mf-TAW"/>
+                            <constraint firstItem="kRT-vv-iNQ" firstAttribute="top" secondItem="wAW-Ql-s7w" secondAttribute="bottom" id="dVJ-Nf-llV"/>
+                            <constraint firstAttribute="trailing" secondItem="kRT-vv-iNQ" secondAttribute="trailing" id="hKG-G7-gB7"/>
+                            <constraint firstItem="8zU-jB-NBu" firstAttribute="top" secondItem="kRT-vv-iNQ" secondAttribute="bottom" id="kIU-On-yif"/>
+                            <constraint firstItem="kRT-vv-iNQ" firstAttribute="leading" secondItem="d5d-em-2p2" secondAttribute="leading" id="rMW-Vx-e4B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O4G-sL-7kI"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="ACTIVITY" id="KbZ-Ly-Xf4"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="kRT-vv-iNQ" id="XxJ-l7-utd"/>
+                        <outlet property="containerView" destination="8zU-jB-NBu" id="4SC-g0-f7B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hs9-nG-viK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3801" y="-3958"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eZ3-U8-93B">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xak-SE-mWN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9j7-pT-Ngy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="F27-Na-OJa" kind="relationship" relationship="rootViewController" id="ilI-Tu-dLW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4O-XZ-WhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4690" y="-3958"/>
         </scene>
     </scenes>
 </document>
