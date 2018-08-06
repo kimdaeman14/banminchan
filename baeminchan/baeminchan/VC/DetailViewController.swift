@@ -10,28 +10,27 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var label1:UILabel!
+    @IBOutlet weak var label2:UILabel!
+    @IBOutlet weak var imageView:UIImageView!
+
+    var lateltext1:String?
+    var lateltext2:String?
+    var detailImage:UIImage?
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.label1.text = self.lateltext1
+        self.label2.text = self.lateltext2
+        self.imageView.image = self.detailImage
+
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .yellow
 
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
