@@ -35,9 +35,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="323"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
-                                        <connections>
-                                            <segue destination="vwb-Kl-ufn" kind="show" id="65x-Qc-hLO"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -61,6 +58,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectView" destination="VeD-fW-We7" id="3PF-5d-sgM"/>
+                        <segue destination="vwb-Kl-ufn" kind="show" identifier="toDetailSegue" id="bo4-gF-sdL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,6 +88,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XRK-Zd-pt3">
                                 <rect key="frame" x="49" y="232" width="277" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVm-Mi-vEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1637.5999999999999" y="131.52709359605913"/>
+            <point key="canvasLocation" x="1775" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="85i-mc-eKQ">
@@ -129,7 +128,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lS5-rz-F0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151" y="133"/>
+            <point key="canvasLocation" x="-209" y="132"/>
         </scene>
     </scenes>
 </document>

@@ -9,18 +9,18 @@
 import UIKit
 import Alamofire
 
-class CollectionViewController: UIViewController, UICollectionViewDataSource {
+class CollectionViewController: UIViewController {
     
     @IBOutlet weak var collectView:UICollectionView!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-         collectView.register(UINib(nibName: "PostListCell", bundle: nil), forCellWithReuseIdentifier: "PostList")
+        
+        collectView.register(UINib(nibName: "PostListCell", bundle: nil), forCellWithReuseIdentifier: "PostList")
         takeData()
     }
-
+    
     var postlist: [PostList] = [] {
         didSet {
             self.collectView.reloadData()
@@ -48,6 +48,20 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let detailViewController = segue.destination as? DetailViewController else {return}
+        guard let indexPath = sender as? IndexPath  else {return}
+        guard let cell = collectView.cellForItem(at: indexPath) as? PostListCell else { return }
+
+        detailViewController.lateltext1 = cell.firstLabel.text
+        detailViewController.lateltext2 = cell.secondLabel.text
+        detailViewController.detailImage = cell.imageView.image
+    }
+}
+
+extension CollectionViewController : UICollectionViewDataSource  {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return postlist.count
     }
@@ -56,6 +70,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostList", for: indexPath) as! PostListCell
         cell.firstLabel.text = self.postlist[indexPath.row].title
         cell.secondLabel.text = self.postlist[indexPath.row].createdDate
+        cell.imageView.isUserInteractionEnabled = true
         let imageCoverURL = self.postlist[indexPath.row].imageCover
         // TODO: - 옵셔널바인딩 수정할것
         if let imageCoverURL = imageCoverURL {
@@ -75,56 +90,16 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource {
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("celcllfdjsaklfdjflkdsjflkadj")
+}
 
-        guard let detailViewController: DetailViewController = segue.destination as? DetailViewController else {return}
-        guard let cell: UICollectionViewCell = sender as? UICollectionViewCell  else {return}
-        guard let cell2: PostListCell = cell as? PostListCell else {return}
-        
-        //이렇게프로퍼티를만들어주는이유는 여기서 UILabel을 바로 활용하려고해도 아직 생성이 안되고 메모리에 올라만와있는 상황이기때문에
-        //익셉션?된다고 함.
-        detailViewController.lateltext1 = cell2.firstLabel.text
-        detailViewController.lateltext2 = cell2.secondLabel.text
-        detailViewController.detailImage = cell2.imageView.image
-    }
+//
+extension CollectionViewController : UICollectionViewDelegate{
     
+    //    셀이 선택되면 디테일뷰가 보여지도록
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("\n---------- [ collectionViewdidSelectItemAt ] ----------\n")
+        performSegue(withIdentifier: "toDetailSegue", sender: indexPath)
+    }
 }
 
 
-//extension CollectionViewController :  {
-//
-//
-//}
-
-//
-//extension CollectionViewController : UICollectionViewDelegate{
-//
-//    //셀이 선택되면 디테일뷰가 보여지도록
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print("\n---------- [ collectionViewdidSelectItemAt ] ----------\n")
-//        let detailViewController = DetailViewController()
-//        detailViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-//        self.present(detailViewController, animated: true)
-//
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostList", for: indexPath) as! PostListCell
-//        cell.firstLabel.text = self.postlist[indexPath.row].title
-//        cell.secondLabel.text = self.postlist[indexPath.row].createdDate
-//        let imageCoverURL = self.postlist[indexPath.row].imageCover
-//        // TODO: - 옵셔널바인딩 수정할것
-//        if let imageCoverURL = imageCoverURL {
-//            let url = URL(string: imageCoverURL)
-//            if let urlData = url {
-//                let task = URLSession.shared.dataTask(with: urlData) { (data,respones,error) in
-//                    if let image = data{
-//                        let images = UIImage(data: image)
-//                        DispatchQueue.main.async {
-//                            cell.imageView?.image = images
-//                        }
-//                    }
-//                }
-//                task.resume()
-//            }
-//        }
-//    }
-//}

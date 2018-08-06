@@ -23,12 +23,15 @@ class ViewController: UIViewController {
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("a")
         guard let secondViewController : SecondViewController = segue.destination as? SecondViewController else {return}
         guard let cell: UITableViewCell = sender as? UITableViewCell else {return}
         
         secondViewController.labelstring = cell.textLabel?.text
 
      }
+    
+    
 }
 
 extension ViewController: UITableViewDataSource {
