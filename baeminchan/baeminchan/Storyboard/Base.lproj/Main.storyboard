@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GsT-k7-19I">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PostList" reuseIdentifier="PostList" id="GsT-k7-19I" customClass="PostListCell" customModule="baeminchan" customModuleProvider="target">
                                         <rect key="frame" x="37.666666666666664" y="0.0" width="300" height="323"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -36,7 +36,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                         <connections>
-                                            <segue destination="vwb-Kl-ufn" kind="show" id="6jO-X3-k1H"/>
+                                            <segue destination="vwb-Kl-ufn" kind="show" id="65x-Qc-hLO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
