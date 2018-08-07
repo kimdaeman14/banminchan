@@ -41,7 +41,7 @@ class CollectionViewController: UIViewController {
                     }catch{
                         print(error.localizedDescription)
                     }
-                //                print(self?.postlist)
+                //                   print(self?.postlist)
                 case .failure(let error):
                     print(error)
                 }
