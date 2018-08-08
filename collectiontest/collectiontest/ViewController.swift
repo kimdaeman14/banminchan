@@ -26,7 +26,9 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: CustomCell.reusableIdentifier)
         tableView.register(UINib(nibName: "imageViewCell", bundle: nil), forCellReuseIdentifier: imageViewCell.reusableIdentifier)
         tableView.register(UINib(nibName: "InformationCell", bundle: nil), forCellReuseIdentifier: InformationCell.reusableIdentifier)
-        
+        tableView.register(UINib(nibName: "CoperationCell", bundle: nil), forCellReuseIdentifier:
+        CoperationCell.reusableIdentifier)
+        tableView.register(UINib(nibName: "ProductViewCell", bundle: nil), forCellReuseIdentifier: ProductViewCell.reusableIdentifier)
         
     }
     
@@ -59,6 +61,16 @@ extension ViewController : UITableViewDataSource {
             tableView.rowHeight = 200
             return cell3
             
+        case 2:
+            let cell4 = tableView.dequeueReusableCell(withIdentifier: CoperationCell.reusableIdentifier, for: indexPath) as! CoperationCell
+            tableView.rowHeight = 600
+            return cell4
+            
+        case 3:
+            let cell5 = tableView.dequeueReusableCell(withIdentifier: ProductViewCell.reusableIdentifier, for: indexPath) as! ProductViewCell
+            tableView.rowHeight = 500
+            return cell5
+            
         default:
             print("fail")
         }
@@ -68,7 +80,7 @@ extension ViewController : UITableViewDataSource {
     
     public func numberOfSections(in tableView: UITableView) -> Int{
         
-        return 3
+        return 5
     }
     
     

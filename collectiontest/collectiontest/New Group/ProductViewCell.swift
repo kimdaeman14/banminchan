@@ -1,5 +1,5 @@
 //
-//  CoperationCell.swift
+//  ProductViewCell.swift
 //  collectiontest
 //
 //  Created by kimdaeman14 on 2018. 8. 8..
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class CoperationCell: UITableViewCell {
-
-    static let reusableIdentifier = "coperationCell"
+class ProductViewCell: UITableViewCell {
 
     
+    static let reusableIdentifier = "productViewCell"
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

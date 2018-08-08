@@ -11,6 +11,8 @@
 		A73BE4BC211AEEB00051FCAE /* InformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73BE4BA211AEEB00051FCAE /* InformationCell.xib */; };
 		A73BE4BF211AF1AF0051FCAE /* CoperationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73BE4BD211AF1AF0051FCAE /* CoperationCell.swift */; };
 		A73BE4C0211AF1AF0051FCAE /* CoperationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73BE4BE211AF1AF0051FCAE /* CoperationCell.xib */; };
+		A73BE4C3211AFCDC0051FCAE /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73BE4C1211AFCDC0051FCAE /* ProductViewCell.swift */; };
+		A73BE4C4211AFCDC0051FCAE /* ProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73BE4C2211AFCDC0051FCAE /* ProductViewCell.xib */; };
 		A7C2C8B9211A315400FF7118 /* ScrollTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C2C8B8211A315400FF7118 /* ScrollTestViewController.swift */; };
 		A7C2C8CD211AB26700FF7118 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C2C8CB211AB26700FF7118 /* CustomCell.swift */; };
 		A7C2C8CE211AB26700FF7118 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7C2C8CC211AB26700FF7118 /* CustomCell.xib */; };
@@ -28,6 +30,8 @@
 		A73BE4BA211AEEB00051FCAE /* InformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationCell.xib; sourceTree = "<group>"; };
 		A73BE4BD211AF1AF0051FCAE /* CoperationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoperationCell.swift; sourceTree = "<group>"; };
 		A73BE4BE211AF1AF0051FCAE /* CoperationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoperationCell.xib; sourceTree = "<group>"; };
+		A73BE4C1211AFCDC0051FCAE /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
+		A73BE4C2211AFCDC0051FCAE /* ProductViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewCell.xib; sourceTree = "<group>"; };
 		A7C2C8B8211A315400FF7118 /* ScrollTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTestViewController.swift; sourceTree = "<group>"; };
 		A7C2C8CB211AB26700FF7118 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		A7C2C8CC211AB26700FF7118 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				A73BE4BA211AEEB00051FCAE /* InformationCell.xib */,
 				A73BE4BD211AF1AF0051FCAE /* CoperationCell.swift */,
 				A73BE4BE211AF1AF0051FCAE /* CoperationCell.xib */,
+				A73BE4C1211AFCDC0051FCAE /* ProductViewCell.swift */,
+				A73BE4C2211AFCDC0051FCAE /* ProductViewCell.xib */,
 			);
 			name = View;
 			path = "New Group";
@@ -158,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73BE4C4211AFCDC0051FCAE /* ProductViewCell.xib in Resources */,
 				A73BE4BC211AEEB00051FCAE /* InformationCell.xib in Resources */,
 				A7DBF523211973830075B957 /* LaunchScreen.storyboard in Resources */,
 				A7C2C8D2211AB76D00FF7118 /* imageViewCell.xib in Resources */,
@@ -179,6 +186,7 @@
 				A7C2C8B9211A315400FF7118 /* ScrollTestViewController.swift in Sources */,
 				A7DBF51B211973820075B957 /* ViewController.swift in Sources */,
 				A7C2C8CD211AB26700FF7118 /* CustomCell.swift in Sources */,
+				A73BE4C3211AFCDC0051FCAE /* ProductViewCell.swift in Sources */,
 				A7DBF519211973820075B957 /* AppDelegate.swift in Sources */,
 				A73BE4BF211AF1AF0051FCAE /* CoperationCell.swift in Sources */,
 				A7C2C8D1211AB76D00FF7118 /* imageViewCell.swift in Sources */,
