@@ -48,7 +48,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="LwZ-Ss-Caz">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="collectionViewCell" reuseIdentifier="collectionViewCell" id="LwZ-Ss-Caz" customClass="CollectionViewCell" customModule="collectiontest" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -57,6 +57,10 @@
                                                             </view>
                                                         </collectionViewCell>
                                                     </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="M4q-mc-Wb9" id="3xc-oU-hUI"/>
+                                                        <outlet property="delegate" destination="M4q-mc-Wb9" id="lEz-7S-K4K"/>
+                                                    </connections>
                                                 </collectionView>
                                             </subviews>
                                             <constraints>
@@ -66,6 +70,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="PZS-jy-mDL" secondAttribute="trailing" id="dGV-MV-DPR"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionView" destination="PZS-jy-mDL" id="Y5x-Yi-4is"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

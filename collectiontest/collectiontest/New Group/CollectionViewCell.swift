@@ -11,6 +11,7 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
 
     static let reusableIdentifier = "collectionViewCell"
+    
     @IBOutlet weak var detailImage:UIImageView!
     @IBOutlet weak var label1:UILabel!
     @IBOutlet weak var label2:UILabel!
