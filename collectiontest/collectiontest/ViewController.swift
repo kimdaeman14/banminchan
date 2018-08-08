@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,8 +28,9 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "imageViewCell", bundle: nil), forCellReuseIdentifier: imageViewCell.reusableIdentifier)
         tableView.register(UINib(nibName: "InformationCell", bundle: nil), forCellReuseIdentifier: InformationCell.reusableIdentifier)
         tableView.register(UINib(nibName: "CoperationCell", bundle: nil), forCellReuseIdentifier:
-        CoperationCell.reusableIdentifier)
+            CoperationCell.reusableIdentifier)
         tableView.register(UINib(nibName: "ProductViewCell", bundle: nil), forCellReuseIdentifier: ProductViewCell.reusableIdentifier)
+       
         
     }
     
@@ -51,10 +53,10 @@ extension ViewController : UITableViewDataSource {
                 cell1.imageCell.image = self.image
             }
             return cell1
-//        case 1:
-//            let cell2 = tableView.dequeueReusableCell(withIdentifier: imageViewCell.reusableIdentifier, for: indexPath) as! imageViewCell
-//            tableView.rowHeight = 300
-//            return cell2
+            //        case 1:
+            //            let cell2 = tableView.dequeueReusableCell(withIdentifier: imageViewCell.reusableIdentifier, for: indexPath) as! imageViewCell
+            //            tableView.rowHeight = 300
+            //            return cell2
             
         case 1:
             let cell3 = tableView.dequeueReusableCell(withIdentifier: InformationCell.reusableIdentifier, for: indexPath) as! InformationCell
@@ -70,7 +72,6 @@ extension ViewController : UITableViewDataSource {
             let cell5 = tableView.dequeueReusableCell(withIdentifier: ProductViewCell.reusableIdentifier, for: indexPath) as! ProductViewCell
             tableView.rowHeight = 500
             return cell5
-            
         default:
             print("fail")
         }
@@ -83,7 +84,6 @@ extension ViewController : UITableViewDataSource {
         return 5
     }
     
-    
-    
 }
+
 

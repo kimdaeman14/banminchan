@@ -1,5 +1,5 @@
 //
-//  InformationCell.swift
+//  CollectionViewCell.swift
 //  collectiontest
 //
 //  Created by kimdaeman14 on 2018. 8. 8..
@@ -8,22 +8,19 @@
 
 import UIKit
 
-class InformationCell: UITableViewCell {
+class CollectionViewCell: UICollectionViewCell {
 
-    static let reusableIdentifier = "informationCell"
-
-    
+    static let reusableIdentifier = "collectionViewCell"
+    @IBOutlet weak var detailImage:UIImageView!
     @IBOutlet weak var label1:UILabel!
     @IBOutlet weak var label2:UILabel!
     @IBOutlet weak var label3:UILabel!
-    @IBOutlet weak var button:UIButton!
 
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-
-    
 }

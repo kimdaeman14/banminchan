@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7133D41211B230500479196 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7133D3F211B230500479196 /* CollectionViewCell.swift */; };
+		A7133D42211B230500479196 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7133D40211B230500479196 /* CollectionViewCell.xib */; };
+		A7133D46211B2B2100479196 /* RootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7133D44211B2B2100479196 /* RootCell.swift */; };
+		A7133D47211B2B2100479196 /* RootCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7133D45211B2B2100479196 /* RootCell.xib */; };
 		A73BE4BB211AEEB00051FCAE /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73BE4B9211AEEB00051FCAE /* InformationCell.swift */; };
 		A73BE4BC211AEEB00051FCAE /* InformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73BE4BA211AEEB00051FCAE /* InformationCell.xib */; };
 		A73BE4BF211AF1AF0051FCAE /* CoperationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73BE4BD211AF1AF0051FCAE /* CoperationCell.swift */; };
@@ -26,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A7133D3F211B230500479196 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		A7133D40211B230500479196 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		A7133D44211B2B2100479196 /* RootCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCell.swift; sourceTree = "<group>"; };
+		A7133D45211B2B2100479196 /* RootCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootCell.xib; sourceTree = "<group>"; };
 		A73BE4B9211AEEB00051FCAE /* InformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
 		A73BE4BA211AEEB00051FCAE /* InformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationCell.xib; sourceTree = "<group>"; };
 		A73BE4BD211AF1AF0051FCAE /* CoperationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoperationCell.swift; sourceTree = "<group>"; };
@@ -57,9 +65,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7133D43211B2AFB00479196 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A7133D44211B2B2100479196 /* RootCell.swift */,
+				A7133D45211B2B2100479196 /* RootCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		A7C2C8CA211AB24C00FF7118 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A7133D43211B2AFB00479196 /* Cell */,
 				A7C2C8CB211AB26700FF7118 /* CustomCell.swift */,
 				A7C2C8CC211AB26700FF7118 /* CustomCell.xib */,
 				A7C2C8CF211AB76D00FF7118 /* imageViewCell.swift */,
@@ -70,6 +88,8 @@
 				A73BE4BE211AF1AF0051FCAE /* CoperationCell.xib */,
 				A73BE4C1211AFCDC0051FCAE /* ProductViewCell.swift */,
 				A73BE4C2211AFCDC0051FCAE /* ProductViewCell.xib */,
+				A7133D3F211B230500479196 /* CollectionViewCell.swift */,
+				A7133D40211B230500479196 /* CollectionViewCell.xib */,
 			);
 			name = View;
 			path = "New Group";
@@ -169,9 +189,11 @@
 				A7DBF523211973830075B957 /* LaunchScreen.storyboard in Resources */,
 				A7C2C8D2211AB76D00FF7118 /* imageViewCell.xib in Resources */,
 				A7DBF520211973830075B957 /* Assets.xcassets in Resources */,
+				A7133D47211B2B2100479196 /* RootCell.xib in Resources */,
 				A73BE4C0211AF1AF0051FCAE /* CoperationCell.xib in Resources */,
 				A7C2C8CE211AB26700FF7118 /* CustomCell.xib in Resources */,
 				A7DBF51E211973820075B957 /* Main.storyboard in Resources */,
+				A7133D42211B230500479196 /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,12 +206,14 @@
 			files = (
 				A73BE4BB211AEEB00051FCAE /* InformationCell.swift in Sources */,
 				A7C2C8B9211A315400FF7118 /* ScrollTestViewController.swift in Sources */,
+				A7133D41211B230500479196 /* CollectionViewCell.swift in Sources */,
 				A7DBF51B211973820075B957 /* ViewController.swift in Sources */,
 				A7C2C8CD211AB26700FF7118 /* CustomCell.swift in Sources */,
 				A73BE4C3211AFCDC0051FCAE /* ProductViewCell.swift in Sources */,
 				A7DBF519211973820075B957 /* AppDelegate.swift in Sources */,
 				A73BE4BF211AF1AF0051FCAE /* CoperationCell.swift in Sources */,
 				A7C2C8D1211AB76D00FF7118 /* imageViewCell.swift in Sources */,
+				A7133D46211B2B2100479196 /* RootCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
