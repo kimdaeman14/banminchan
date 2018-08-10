@@ -13,17 +13,21 @@ class ViewController: UIViewController {
     let str = "안녕하세요"
     let str2 = "반갑습니다"
     let image = #imageLiteral(resourceName: "c0420529ceed879acfb2ff88d9dac7ae")
+   
+        let arrImage: [String] = ["a3064bfb56f135be09b06708ba566425",
+                                  "d8306452d7b3820f92146848e88378fd",
+                                  "a3064bfb56f135be09b06708ba566425",
+                                  "d8306452d7b3820f92146848e88378fd"
+    ]
     
     @IBOutlet weak var tableView:UITableView!
-    
-
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CollectionViewCell.reusableIdentifier)
+        //        collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CollectionViewCell.reusableIdentifier)
         
         //닙네임은 파일이름
         tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: CustomCell.reusableIdentifier)
@@ -32,9 +36,12 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "CoperationCell", bundle: nil), forCellReuseIdentifier:
             CoperationCell.reusableIdentifier)
         tableView.register(UINib(nibName: "ProductViewCell", bundle: nil), forCellReuseIdentifier: ProductViewCell.reusableIdentifier)
-       
+        tableView.register(UINib(nibName: "PageControlCell", bundle: nil), forCellReuseIdentifier: PageControlCell.reusableIdentifier)
         
     }
+    
+    
+    
     
 }
 
@@ -63,6 +70,13 @@ class ViewController: UIViewController {
 //
 //
 //}
+
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70.0
+    }
+}
 
 extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -100,6 +114,31 @@ extension ViewController : UITableViewDataSource {
             let cell5 = tableView.dequeueReusableCell(withIdentifier: ProductViewCell.reusableIdentifier, for: indexPath) as! ProductViewCell
             tableView.rowHeight = 500
             return cell5
+            
+        case 4:
+            let cell6 = tableView.dequeueReusableCell(withIdentifier: PageControlCell.reusableIdentifier) as! PageControlCell
+            tableView.rowHeight = 300
+            
+            //cell6.scrollView.isPagingEnabled = true
+            var baseFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
+
+            for index in 0..<arrImage.count {
+               
+                let subView = UIImageView(frame: baseFrame)
+                
+                baseFrame.origin.x = cell6.scrollView.contentSize.width
+//                print(CGFloat(index))
+                baseFrame.size = cell6.scrollView.frame.size
+                
+                subView.image = UIImage(named: arrImage[index])
+                cell6.scrollView.addSubview(subView)
+                cell6.scrollView.contentSize.width += subView.frame.width
+                print(index)
+                
+            }
+            
+            return cell6
+            
         default:
             print("fail")
         }
@@ -112,8 +151,5 @@ extension ViewController : UITableViewDataSource {
         return 5
     }
     
-    
-    
 }
-
 

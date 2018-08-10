@@ -15,6 +15,8 @@
 		A73BE4C0211AF1AF0051FCAE /* CoperationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73BE4BE211AF1AF0051FCAE /* CoperationCell.xib */; };
 		A73BE4C3211AFCDC0051FCAE /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73BE4C1211AFCDC0051FCAE /* ProductViewCell.swift */; };
 		A73BE4C4211AFCDC0051FCAE /* ProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A73BE4C2211AFCDC0051FCAE /* ProductViewCell.xib */; };
+		A772655E211D81B00012E503 /* PageControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772655C211D81B00012E503 /* PageControlCell.swift */; };
+		A772655F211D81B00012E503 /* PageControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A772655D211D81B00012E503 /* PageControlCell.xib */; };
 		A7C2C8CD211AB26700FF7118 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C2C8CB211AB26700FF7118 /* CustomCell.swift */; };
 		A7C2C8CE211AB26700FF7118 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7C2C8CC211AB26700FF7118 /* CustomCell.xib */; };
 		A7C2C8D1211AB76D00FF7118 /* imageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C2C8CF211AB76D00FF7118 /* imageViewCell.swift */; };
@@ -35,6 +37,8 @@
 		A73BE4BE211AF1AF0051FCAE /* CoperationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoperationCell.xib; sourceTree = "<group>"; };
 		A73BE4C1211AFCDC0051FCAE /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
 		A73BE4C2211AFCDC0051FCAE /* ProductViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewCell.xib; sourceTree = "<group>"; };
+		A772655C211D81B00012E503 /* PageControlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlCell.swift; sourceTree = "<group>"; };
+		A772655D211D81B00012E503 /* PageControlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageControlCell.xib; sourceTree = "<group>"; };
 		A7C2C8CB211AB26700FF7118 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		A7C2C8CC211AB26700FF7118 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		A7C2C8CF211AB76D00FF7118 /* imageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewCell.swift; sourceTree = "<group>"; };
@@ -59,17 +63,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A7133D43211B2AFB00479196 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		A7C2C8CA211AB24C00FF7118 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A7133D43211B2AFB00479196 /* Cell */,
 				A7C2C8CB211AB26700FF7118 /* CustomCell.swift */,
 				A7C2C8CC211AB26700FF7118 /* CustomCell.xib */,
 				A7C2C8CF211AB76D00FF7118 /* imageViewCell.swift */,
@@ -82,6 +78,8 @@
 				A73BE4C2211AFCDC0051FCAE /* ProductViewCell.xib */,
 				A7133D3F211B230500479196 /* CollectionViewCell.swift */,
 				A7133D40211B230500479196 /* CollectionViewCell.xib */,
+				A772655C211D81B00012E503 /* PageControlCell.swift */,
+				A772655D211D81B00012E503 /* PageControlCell.xib */,
 			);
 			name = View;
 			path = "New Group";
@@ -175,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A772655F211D81B00012E503 /* PageControlCell.xib in Resources */,
 				A73BE4C4211AFCDC0051FCAE /* ProductViewCell.xib in Resources */,
 				A73BE4BC211AEEB00051FCAE /* InformationCell.xib in Resources */,
 				A7DBF523211973830075B957 /* LaunchScreen.storyboard in Resources */,
@@ -199,6 +198,7 @@
 				A7DBF51B211973820075B957 /* ViewController.swift in Sources */,
 				A7C2C8CD211AB26700FF7118 /* CustomCell.swift in Sources */,
 				A73BE4C3211AFCDC0051FCAE /* ProductViewCell.swift in Sources */,
+				A772655E211D81B00012E503 /* PageControlCell.swift in Sources */,
 				A7DBF519211973820075B957 /* AppDelegate.swift in Sources */,
 				A73BE4BF211AF1AF0051FCAE /* CoperationCell.swift in Sources */,
 				A7C2C8D1211AB76D00FF7118 /* imageViewCell.swift in Sources */,
