@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //        collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CollectionViewCell.reusableIdentifier)
+//                collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CollectionViewCell.reusableIdentifier)
         
         //닙네임은 파일이름
         tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: CustomCell.reusableIdentifier)
@@ -138,6 +138,11 @@ extension ViewController : UITableViewDataSource {
             }
             
             return cell6
+        case 5:
+            let cell6 = tableView.dequeueReusableCell(withIdentifier: "TestTableViewCell") as! TestTableViewCell
+            
+            
+            return cell6
             
         default:
             print("fail")
@@ -148,7 +153,7 @@ extension ViewController : UITableViewDataSource {
     
     public func numberOfSections(in tableView: UITableView) -> Int{
         
-        return 5
+        return 6
     }
     
 }
