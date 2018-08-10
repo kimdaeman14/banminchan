@@ -10,14 +10,16 @@ import UIKit
 
 class TestTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView1: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        collectionView1.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CollectionViewCell.reusableIdentifier)
+        
+        collectionView1.delegate = self
+        collectionView1.dataSource = self
     }
 
 

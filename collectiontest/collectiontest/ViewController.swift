@@ -37,6 +37,7 @@ class ViewController: UIViewController {
             CoperationCell.reusableIdentifier)
         tableView.register(UINib(nibName: "ProductViewCell", bundle: nil), forCellReuseIdentifier: ProductViewCell.reusableIdentifier)
         tableView.register(UINib(nibName: "PageControlCell", bundle: nil), forCellReuseIdentifier: PageControlCell.reusableIdentifier)
+       
         
     }
     
@@ -139,10 +140,10 @@ extension ViewController : UITableViewDataSource {
             
             return cell6
         case 5:
-            let cell6 = tableView.dequeueReusableCell(withIdentifier: "TestTableViewCell") as! TestTableViewCell
+            let cell7 = tableView.dequeueReusableCell(withIdentifier: "TestTableViewCell") as! TestTableViewCell
             
             
-            return cell6
+            return cell7
             
         default:
             print("fail")
