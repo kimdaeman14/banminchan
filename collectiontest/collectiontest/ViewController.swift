@@ -16,12 +16,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView:UITableView!
     
-    
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+//        collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CollectionViewCell.reusableIdentifier)
         
         //닙네임은 파일이름
         tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: CustomCell.reusableIdentifier)
@@ -35,6 +37,32 @@ class ViewController: UIViewController {
     }
     
 }
+
+//
+//extension ViewController: UICollectionViewDataSource {
+//    @available(iOS 6.0, *)
+//    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+//        return 3
+//    }
+//
+//
+//    @available(iOS 6.0, *)
+//    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reusableIdentifier, for: indexPath) as! CollectionViewCell
+//        cell.detailImage.image = #imageLiteral(resourceName: "c0a4950bf03b0108d67ea69936f6eba5")
+//        cell.label1.text = "22"
+//        cell.label2.text = "22"
+//        cell.label3.text = "22"
+//
+//        return cell
+//    }
+//
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 1
+//    }
+//
+//
+//}
 
 extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
