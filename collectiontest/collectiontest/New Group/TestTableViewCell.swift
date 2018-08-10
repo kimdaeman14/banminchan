@@ -18,8 +18,8 @@ class TestTableViewCell: UITableViewCell {
         
         collectionView1.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CollectionViewCell.reusableIdentifier)
         
-        collectionView1.delegate = self
-        collectionView1.dataSource = self
+//        collectionView1.delegate = self
+//        collectionView1.dataSource = self
     }
 
 

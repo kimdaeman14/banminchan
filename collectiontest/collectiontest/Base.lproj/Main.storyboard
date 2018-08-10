@@ -50,6 +50,10 @@
                                                             <color key="backgroundColor" red="0.30574755640000001" green="1" blue="0.2145668791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </collectionViewCell>
                                                     </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="VQe-bc-RdP" id="fuy-il-9y7"/>
+                                                        <outlet property="delegate" destination="VQe-bc-RdP" id="bXz-SE-laL"/>
+                                                    </connections>
                                                 </collectionView>
                                             </subviews>
                                             <constraints>
@@ -60,7 +64,32 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="collectionView1" destination="KLr-Nd-YbS" id="8ud-7Z-qC0"/>
+                                            <outlet property="collectionView1" destination="KLr-Nd-YbS" id="eXn-pm-Lac"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="scrollViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scrollViewCell" rowHeight="159" id="4M9-zi-Kzi" customClass="ScrollViewCell" customModule="collectiontest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="168" width="375" height="159"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4M9-zi-Kzi" id="eWl-0r-Z5d">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="158.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rV7-fF-Pag">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="158.5"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="4M9-zi-Kzi" id="LsR-67-Loa"/>
+                                                    </connections>
+                                                </scrollView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rV7-fF-Pag" firstAttribute="leading" secondItem="eWl-0r-Z5d" secondAttribute="leading" id="3D9-Ba-B03"/>
+                                                <constraint firstItem="rV7-fF-Pag" firstAttribute="top" secondItem="eWl-0r-Z5d" secondAttribute="top" id="76n-h8-fa0"/>
+                                                <constraint firstAttribute="bottom" secondItem="rV7-fF-Pag" secondAttribute="bottom" id="iaz-a5-H4z"/>
+                                                <constraint firstAttribute="trailing" secondItem="rV7-fF-Pag" secondAttribute="trailing" id="zof-cn-kE6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="scrollView" destination="rV7-fF-Pag" id="doB-f4-lh4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
