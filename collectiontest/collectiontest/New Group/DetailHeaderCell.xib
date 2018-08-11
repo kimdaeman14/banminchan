@@ -25,7 +25,6 @@
                             <constraint firstAttribute="width" constant="76" id="Np0-7o-Jv2"/>
                             <constraint firstAttribute="height" constant="43.5" id="f1G-xT-XYT"/>
                         </constraints>
-                        <color key="tintColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal">
                             <attributedString key="attributedTitle">
                                 <fragment content="   ">
@@ -52,6 +51,9 @@
                                 </fragment>
                             </attributedString>
                         </state>
+                        <connections>
+                            <action selector="tapedButton1:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VXa-0S-kPo"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s6t-T8-o14">
                         <rect key="frame" x="76" y="0.0" width="76" height="43.5"/>
@@ -67,10 +69,13 @@
                                 </fragment>
                             </attributedString>
                         </state>
+                        <connections>
+                            <action selector="tapedButton2:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cci-Dh-gmd"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wp3-Px-CIB">
                         <rect key="frame" x="152" y="0.0" width="76" height="43.5"/>
-                        <color key="tintColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.20784313730000001" green="0.75686274509999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal">
                             <attributedString key="attributedTitle">
                                 <fragment content="   문의   ">
@@ -82,6 +87,9 @@
                                 </fragment>
                             </attributedString>
                         </state>
+                        <connections>
+                            <action selector="tapedButton3:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Aqf-9Z-ZqV"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPj-Rz-6zU">
                         <rect key="frame" x="228" y="0.0" width="76" height="43.5"/>
@@ -97,6 +105,9 @@
                                 </fragment>
                             </attributedString>
                         </state>
+                        <connections>
+                            <action selector="tapedButton4:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0sc-7m-R1E"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

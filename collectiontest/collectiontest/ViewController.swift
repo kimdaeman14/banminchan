@@ -100,6 +100,7 @@ extension ViewController : UITableViewDataSource {
             return cell8
             
         case 7:
+            tableView.rowHeight = 43.5
             let cell9 = tableView.dequeueReusableCell(withIdentifier: "detailHeaderCell") as! DetailHeaderCell
             return cell9
             
