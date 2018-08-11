@@ -32,6 +32,11 @@ extension TestTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reusableIdentifier, for: indexPath) as! CollectionViewCell
         
+        cell.detailImage.image = #imageLiteral(resourceName: "a3064bfb56f135be09b06708ba566425")
+        cell.label1.text = "김종찬"
+        cell.label2.text = "김종찬"
+        cell.label3.text = "김종찬"
+
         return cell
     }
 }
