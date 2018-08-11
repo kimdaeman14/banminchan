@@ -40,7 +40,6 @@ class DetailHeaderCell: UITableViewCell {
         print("taped1")
         if buttonSelected {
             buttonSelected = false
-            button1.backgroundColor = UIColor.white
         }else{
             buttonSelected = true
             button1.backgroundColor = UIColor(displayP3Red: 0.208, green: 0.757, blue: 0.733, alpha: 1)
@@ -54,7 +53,6 @@ class DetailHeaderCell: UITableViewCell {
         print("taped2")
         if buttonSelected {
             buttonSelected = false
-            button2.backgroundColor = UIColor.white
         }else{
             buttonSelected = true
             button2.backgroundColor = UIColor(displayP3Red: 0.208, green: 0.757, blue: 0.733, alpha: 1)
@@ -68,7 +66,6 @@ class DetailHeaderCell: UITableViewCell {
         print("taped3")
         if buttonSelected {
             buttonSelected = false
-            button3.backgroundColor = UIColor.white
         }else{
             buttonSelected = true
             button3.backgroundColor = UIColor(displayP3Red: 0.208, green: 0.757, blue: 0.733, alpha: 1)
@@ -83,7 +80,6 @@ class DetailHeaderCell: UITableViewCell {
         
         if buttonSelected {
             buttonSelected = false
-            button4.backgroundColor = UIColor.white
         }else{
             buttonSelected = true
             button4.backgroundColor = UIColor(displayP3Red: 0.208, green: 0.757, blue: 0.733, alpha: 1)
