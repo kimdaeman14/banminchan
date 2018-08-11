@@ -25,11 +25,11 @@ class DetailHeaderCell: UITableViewCell {
         
         button1.layer.borderColor = UIColor(displayP3Red: 0.894, green: 0.894, blue: 0.894, alpha: 1).cgColor
         button1.layer.borderWidth = 1
-        button2.layer.borderColor = UIColor.lightGray.cgColor
+        button2.layer.borderColor = UIColor(displayP3Red: 0.894, green: 0.894, blue: 0.894, alpha: 1).cgColor
         button2.layer.borderWidth = 1
-        button3.layer.borderColor = UIColor.lightGray.cgColor
+        button3.layer.borderColor = UIColor(displayP3Red: 0.894, green: 0.894, blue: 0.894, alpha: 1).cgColor
         button3.layer.borderWidth = 1
-        button4.layer.borderColor = UIColor.lightGray.cgColor
+        button4.layer.borderColor = UIColor(displayP3Red: 0.894, green: 0.894, blue: 0.894, alpha: 1).cgColor
         button4.layer.borderWidth = 1
       
     }
