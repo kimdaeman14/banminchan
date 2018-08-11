@@ -119,26 +119,7 @@ extension ViewController : UITableViewDataSource {
             let cell5 = tableView.dequeueReusableCell(withIdentifier: ProductViewCell.reusableIdentifier, for: indexPath) as! ProductViewCell
             tableView.rowHeight = 500
             return cell5
-//            let cell6 = tableView.dequeueReusableCell(withIdentifier: PageControlCell.reusableIdentifier) as! PageControlCell
-//            tableView.rowHeight = 300
-//
-//            //cell6.scrollView.isPagingEnabled = true
-//            var baseFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
-//
-//            for index in 0..<arrImage.count {
-//
-//                let subView = UIImageView(frame: baseFrame)
-//
-//                baseFrame.origin.x = cell6.scrollView.contentSize.width
-////                print(CGFloat(index))
-//                baseFrame.size = cell6.scrollView.frame.size
-//
-//                subView.image = UIImage(named: arrImage[index])
-//                cell6.scrollView.addSubview(subView)
-//                cell6.scrollView.contentSize.width += subView.frame.width
-//                print(index)
-//            }
-//            return cell6
+
         case 5:
             let cell7 = tableView.dequeueReusableCell(withIdentifier: "TestTableViewCell") as! TestTableViewCell
             return cell7
