@@ -9,16 +9,23 @@
 import UIKit
 
 class DetailHeaderCell: UITableViewCell {
+    
+    static let reusableIdentifier = "detailHeaderCell"
+
+    
+    @IBOutlet weak var button1:UIButton!
+    @IBOutlet weak var button2:UIButton!
+    @IBOutlet weak var button3:UIButton!
+    @IBOutlet weak var button4:UIButton!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
+        
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+   
     
 }
