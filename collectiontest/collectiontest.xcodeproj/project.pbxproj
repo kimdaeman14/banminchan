@@ -26,6 +26,8 @@
 		A7DBF51E211973820075B957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7DBF51C211973820075B957 /* Main.storyboard */; };
 		A7DBF520211973830075B957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7DBF51F211973830075B957 /* Assets.xcassets */; };
 		A7DBF523211973830075B957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7DBF521211973830075B957 /* LaunchScreen.storyboard */; };
+		A7F965A3211F6C37004CE8B5 /* DetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F965A1211F6C37004CE8B5 /* DetailHeaderCell.swift */; };
+		A7F965A4211F6C37004CE8B5 /* DetailHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F965A2211F6C37004CE8B5 /* DetailHeaderCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		A7DBF51F211973830075B957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7DBF522211973830075B957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7DBF524211973830075B957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7F965A1211F6C37004CE8B5 /* DetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderCell.swift; sourceTree = "<group>"; };
+		A7F965A2211F6C37004CE8B5 /* DetailHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHeaderCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				A7726562211DA31B0012E503 /* TestCell.swift */,
 				A763962C211E0C0D0056C2EA /* ScrollViewCell.swift */,
 				A763962D211E0C0D0056C2EA /* ScrollViewCell.xib */,
+				A7F965A1211F6C37004CE8B5 /* DetailHeaderCell.swift */,
+				A7F965A2211F6C37004CE8B5 /* DetailHeaderCell.xib */,
 			);
 			name = View;
 			path = "New Group";
@@ -182,6 +188,7 @@
 				A7DBF51E211973820075B957 /* Main.storyboard in Resources */,
 				A763962F211E0C0D0056C2EA /* ScrollViewCell.xib in Resources */,
 				A7133D42211B230500479196 /* CollectionViewCell.xib in Resources */,
+				A7F965A4211F6C37004CE8B5 /* DetailHeaderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +203,7 @@
 				A763962E211E0C0D0056C2EA /* ScrollViewCell.swift in Sources */,
 				A73BE4BB211AEEB00051FCAE /* InformationCell.swift in Sources */,
 				A7133D41211B230500479196 /* CollectionViewCell.swift in Sources */,
+				A7F965A3211F6C37004CE8B5 /* DetailHeaderCell.swift in Sources */,
 				A7DBF51B211973820075B957 /* ViewController.swift in Sources */,
 				A7C2C8CD211AB26700FF7118 /* CustomCell.swift in Sources */,
 				A73BE4C3211AFCDC0051FCAE /* ProductViewCell.swift in Sources */,
