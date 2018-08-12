@@ -20,7 +20,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="199" height="271"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7fdced70a78625d56daaf6190f6ce1b0" translatesAutoresizingMaskIntoConstraints="NO" id="mBC-ZZ-ymT">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8093f88d6cc26265fc81962d84913576" translatesAutoresizingMaskIntoConstraints="NO" id="mBC-ZZ-ymT">
                         <rect key="frame" x="0.0" y="0.0" width="199" height="199"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="mBC-ZZ-ymT" secondAttribute="height" multiplier="1:1" id="LYP-RS-yoN"/>
@@ -72,6 +72,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="7fdced70a78625d56daaf6190f6ce1b0" width="296" height="296"/>
+        <image name="8093f88d6cc26265fc81962d84913576" width="640" height="640"/>
     </resources>
 </document>

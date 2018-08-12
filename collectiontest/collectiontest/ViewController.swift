@@ -8,8 +8,29 @@
 
 import UIKit
 
+
+/*
+ 실행하고 싶은곳에
+ 
+ class EE {
+ let g = DD()
+ 
+ g.deletage = self
+ }
+ 
+ Extension EE: A {
+ func b(
+ 실행할 메서드
+ )
+ }
+ */
+
+
 class ViewController: UIViewController {
     
+    
+    
+
     let str = "안녕하세요"
     let str2 = "반갑습니다"
     let image = #imageLiteral(resourceName: "c0420529ceed879acfb2ff88d9dac7ae")
@@ -22,9 +43,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView:UITableView!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         
 //                collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CollectionViewCell.reusableIdentifier)
@@ -38,10 +61,19 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "DetailHeaderCell", bundle: nil), forCellReuseIdentifier: DetailHeaderCell.reusableIdentifier)
        
         
+        
     }
     
     
     
+    
+}
+
+extension ViewController: aa {
+    func b(){
+        print("\n---------- [ 잘되는건가 ? ? ? ] ----------\n")
+//        tableView.reloadData()
+    }
     
 }
 
@@ -93,6 +125,7 @@ extension ViewController : UITableViewDataSource {
 
         case 5:
             let cell7 = tableView.dequeueReusableCell(withIdentifier: "TestTableViewCell") as! TestTableViewCell
+//            cell7.collectionView1.reloadData()
             return cell7
             
         case 6:
@@ -102,6 +135,7 @@ extension ViewController : UITableViewDataSource {
         case 7:
             tableView.rowHeight = 43.5
             let cell9 = tableView.dequeueReusableCell(withIdentifier: "detailHeaderCell") as! DetailHeaderCell
+            cell9.delegate = self
             return cell9
             
         default:

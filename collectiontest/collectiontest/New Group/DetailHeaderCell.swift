@@ -7,8 +7,32 @@
 //
 
 import UIKit
+/*
+ 뷰에
+ Protocol A: class {
+ func b()
+ }
+ 
+ Class DD {
+ weak var delegate: A?
+ 
+ 
+ @IBAction private func actionButton() {
+ delegate.b()
+ }
+ }
+ */
+
+protocol aa:class { //프로토콜 aa는 func b()를 꼭 구현해야한다.
+    func b()
+}
+
+
 
 class DetailHeaderCell: UITableViewCell {
+    
+    weak var delegate: aa?
+
     
     static let reusableIdentifier = "detailHeaderCell"
     var buttonSelected: Bool = false
@@ -38,6 +62,7 @@ class DetailHeaderCell: UITableViewCell {
     
     @IBAction private func tapedButton1(_ sender: UIButton){
         print("taped1")
+        delegate?.b()
         if buttonSelected {
             buttonSelected = false
         }else{
@@ -92,3 +117,7 @@ class DetailHeaderCell: UITableViewCell {
    
     
 }
+
+
+
+
