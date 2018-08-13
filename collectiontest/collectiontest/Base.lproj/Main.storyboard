@@ -92,6 +92,28 @@
                                             <outlet property="scrollView" destination="rV7-fF-Pag" id="doB-f4-lh4"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailImageViewCell" rowHeight="146" id="QRA-ZL-LBG" customClass="DetailImageViewCell" customModule="collectiontest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="327" width="375" height="146"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QRA-ZL-LBG" id="Sv4-ZL-YHG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="145.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlL-Q1-9P2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="145.5"/>
+                                                </scrollView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="qlL-Q1-9P2" secondAttribute="trailing" id="1B8-e8-s0j"/>
+                                                <constraint firstAttribute="bottom" secondItem="qlL-Q1-9P2" secondAttribute="bottom" id="SSK-di-rpm"/>
+                                                <constraint firstItem="qlL-Q1-9P2" firstAttribute="leading" secondItem="Sv4-ZL-YHG" secondAttribute="leading" id="qJ1-kw-Nvr"/>
+                                                <constraint firstItem="qlL-Q1-9P2" firstAttribute="top" secondItem="Sv4-ZL-YHG" secondAttribute="top" id="xbc-gS-PiZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="scrollView" destination="qlL-Q1-9P2" id="nby-ks-ZgS"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="yJT-1Q-Ltm"/>

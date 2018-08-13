@@ -9,15 +9,15 @@
 import UIKit
 
 
-protocol aaDelegate:class { //프로토콜 aa는 func b()를 꼭 구현해야한다.
-    func b()
+protocol ListReloadDelegate:class { //프로토콜 aa는 func b()를 꼭 구현해야한다.
+    func ListReload()
 }
 
 
 
 class DetailHeaderCell: UITableViewCell {
     
-    weak var delegate: aaDelegate?
+    weak var delegate: ListReloadDelegate?
 
     
     static let reusableIdentifier = "detailHeaderCell"
@@ -49,7 +49,7 @@ class DetailHeaderCell: UITableViewCell {
     //뷰가할일 버튼이할일. 
     @IBAction private func tapedButton1(_ sender: UIButton){
         print("taped1")
-        delegate?.b()
+        delegate?.ListReload()
         if buttonSelected {
             buttonSelected = false
         }else{

@@ -32,7 +32,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // Do any additional setup after loading the view, typically from a nib.
         
 //                collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CollectionViewCell.reusableIdentifier)
@@ -54,10 +53,9 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: aaDelegate {
-    func b(){
+extension ViewController: ListReloadDelegate {
+    func ListReload(){
         print("\n---------- [ 잘되는건가 ? ? ? ] ----------\n")
-//        tableView.reloadData()
     }
     
 }
@@ -72,6 +70,7 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         return 1
     }
     
@@ -103,11 +102,6 @@ extension ViewController : UITableViewDataSource {
             tableView.rowHeight = 500
             return cell5
             
-        case 4:
-            let cell5 = tableView.dequeueReusableCell(withIdentifier: ProductViewCell.reusableIdentifier, for: indexPath) as! ProductViewCell
-            tableView.rowHeight = 500
-            return cell5
-
         case 5:
             let cell7 = tableView.dequeueReusableCell(withIdentifier: "TestTableViewCell") as! TestTableViewCell
 //            cell7.collectionView1.reloadData()
@@ -123,6 +117,11 @@ extension ViewController : UITableViewDataSource {
             cell9.delegate = self
             return cell9
             
+        case 8:
+            tableView.rowHeight = 1000
+            let cell10 = tableView.dequeueReusableCell(withIdentifier: "detailImageViewCell") as! DetailImageViewCell
+            return cell10
+            
         default:
             print("fail")
         }
@@ -132,7 +131,7 @@ extension ViewController : UITableViewDataSource {
     
     public func numberOfSections(in tableView: UITableView) -> Int{
         
-        return 8
+        return 9
     }
     
 }
