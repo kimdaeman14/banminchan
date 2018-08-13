@@ -30,7 +30,7 @@ class DetailImageViewCell: UITableViewCell, UIScrollViewDelegate {
     }
     //375 812
     func setUI() {
-        let height = 345 * scrollView.frame.width / 588
+//        let height = 345 * scrollView.frame.width / 588
 //        scrollView.isPagingEnabled = true
         scrollView.delegate = self
         
@@ -42,12 +42,12 @@ class DetailImageViewCell: UITableViewCell, UIScrollViewDelegate {
     }
     
     private func addPageToScrollView(with image: UIImage) {
-        let height = 345 * scrollView.frame.width / 588
+//        let height = 345 * scrollView.frame.width / 588
         let pageFrame = CGRect(
-            origin: CGPoint(x: scrollView.contentSize.width, y: 0),
-            size: CGSize(width: scrollView.frame.width, height: height)
+            origin: CGPoint(x: 0, y: scrollView.contentSize.height),
+            size: CGSize(width: scrollView.frame.width, height: scrollView.frame.height)
         )
-        print(scrollView.frame.height)
+//        print(scrollView.frame.height)
         let imageButtonView = UIButton(frame: pageFrame)
         imageButtonView.contentMode = .scaleAspectFill
         imageButtonView.setBackgroundImage(image, for: .normal)
