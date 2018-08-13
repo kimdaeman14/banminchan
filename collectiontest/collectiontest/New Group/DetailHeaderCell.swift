@@ -7,23 +7,9 @@
 //
 
 import UIKit
-/*
- 뷰에
- Protocol A: class {
- func b()
- }
- 
- Class DD {
- weak var delegate: A?
- 
- 
- @IBAction private func actionButton() {
- delegate.b()
- }
- }
- */
 
-protocol aa:class { //프로토콜 aa는 func b()를 꼭 구현해야한다.
+
+protocol aaDelegate:class { //프로토콜 aa는 func b()를 꼭 구현해야한다.
     func b()
 }
 
@@ -31,7 +17,7 @@ protocol aa:class { //프로토콜 aa는 func b()를 꼭 구현해야한다.
 
 class DetailHeaderCell: UITableViewCell {
     
-    weak var delegate: aa?
+    weak var delegate: aaDelegate?
 
     
     static let reusableIdentifier = "detailHeaderCell"
@@ -60,6 +46,7 @@ class DetailHeaderCell: UITableViewCell {
 
   
     
+    //뷰가할일 버튼이할일. 
     @IBAction private func tapedButton1(_ sender: UIButton){
         print("taped1")
         delegate?.b()

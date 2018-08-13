@@ -9,21 +9,6 @@
 import UIKit
 
 
-/*
- 실행하고 싶은곳에
- 
- class EE {
- let g = DD()
- 
- g.deletage = self
- }
- 
- Extension EE: A {
- func b(
- 실행할 메서드
- )
- }
- */
 
 
 class ViewController: UIViewController {
@@ -69,7 +54,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: aa {
+extension ViewController: aaDelegate {
     func b(){
         print("\n---------- [ 잘되는건가 ? ? ? ] ----------\n")
 //        tableView.reloadData()
